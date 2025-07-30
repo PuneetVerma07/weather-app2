@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SearchBox from "./components/Searchbox";
+import SearchBox from "./components/SearchBox";
 import WeatherInfo from "./components/WeatherInfo";
 import Loader from "./components/Loader";
 import ErrorMessage from "./components/ErrorMessage";
