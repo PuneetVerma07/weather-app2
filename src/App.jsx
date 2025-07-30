@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Searchbox from "./components/Searchbox";
+import SearchBox from "./components/Searchbox";
 import WeatherInfo from "./components/WeatherInfo";
 import Loader from "./components/Loader";
 import ErrorMessage from "./components/ErrorMessage";
@@ -72,7 +72,7 @@ const App = () => {
               {darkMode ? "Light" : "Dark"}
             </button>
           </div>
-          <Searchbox onSearch={fetchWeather} />
+          <SearchBox onSearch={fetchWeather} />
           {loading && <Loader />}
           {error && <ErrorMessage message={error} />}
           {weather && <WeatherInfo weather={weather} />}
