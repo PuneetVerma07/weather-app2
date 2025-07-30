@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SearchBox from "./components/SearchBox";
 import WeatherInfo from "./components/WeatherInfo";
 import Loader from "./components/Loader";
@@ -11,6 +11,15 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [weather, setWeather] = useState(null);
+
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
 
   const fetchWeather = async (cityName) => {
     setLoading(true);
